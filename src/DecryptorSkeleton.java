@@ -1,9 +1,31 @@
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class DecryptorSkeleton{
-
-
+/**
+ * For this mini-assignment, the goal is to git you guys more familiar with Git.
+ * You'll need to finish each of the methods. We made certain to make each method
+ * relatively simple, as we are aware not everyone has experience with Java yet.
+ *
+ * Fear not, most of these can be solved with simple Google searches. The primary
+ * goal is to make it such that each one of your team members makes at least one
+ * commit (most likely a commit per method completion). Once finished, show your
+ * TA the working code, as well as your Git history showing every team member
+ * made a contribution. Explain what problems you had. Did you get your first
+ * taste of merge conflicts? Potentially this could have been separated into multiple
+ * files? What are your thoughts?
+ *
+ * Remember, GOOGLE IS YOUR FRIEND! If you feel you're working too hard on a problem,
+ * you most likely are. Oh, and if you are completely new to Java, you're going to
+ * love how much easier it is to work with arrays (and other data structures) in this
+ * language as opposed to C (The C solution for this is literally like 8x more complex).
+ *
+ * Place your @author tags here.
+ * @author First Last : netid@iastate.edu
+ * @author Zachary Kline : zbkline@iastate.edu
+ * @author ...
+ * @author ...
+ */
+public class DecryptorSkeleton {
     public static void main(String[] args) {
         int[] toDecrypt = {
                 101001, 1001101, 1010011, 11010, 10, 10000000, 1001100, 1101011, 11,
@@ -62,7 +84,15 @@ public class DecryptorSkeleton{
      * @param toDecrypt - The array to be decoded.
      */
     public static void shiftArrayValues(int[] toDecrypt) {
-        // TODO
+        for (int i = 0; i < toDecrypt.length; i++) {
+            if (i % 3 == 0) {
+                toDecrypt[i] = toDecrypt[i] - 1;
+            } else if (i % 3 == 1) {
+                toDecrypt[i] = toDecrypt[i] - 2;
+            } else if (i % 3 == 2) {
+                toDecrypt[i] = toDecrypt[i] - 3;
+            }
+        }
     }
 
 
@@ -125,7 +155,9 @@ public class DecryptorSkeleton{
 
         StringBuilder solution = new StringBuilder();
 
-        // TODO
+        for (int i = 0; i < toDecrypt.length; i++) {
+            solution.append(cypher.get(toDecrypt[i]));
+        }
 
         solution.append('!');
         return solution.toString();
