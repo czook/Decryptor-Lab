@@ -34,13 +34,13 @@ public class DecryptorSkeleton {
         };
 
         convertBinaryArrayToDecimalArray(toDecrypt);
-        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
+//        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 41 and the last is 58.
 
         shiftArrayValues(toDecrypt);
-        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 40 and the last is 55.
+//        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 40 and the last is 55.
 
         divideArrayValues(toDecrypt);
-        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 8 and the last is 11.
+//        System.out.println(Arrays.toString(toDecrypt)); // As a check, the first value will be 8 and the last is 11.
 
         System.out.println(A1Z26Cypher(toDecrypt));     // As a check, the first word in this String is "hope".
     }
@@ -63,7 +63,6 @@ public class DecryptorSkeleton {
             String temp = Integer.toString(toDecrypt[i]);
             int decimal = Integer.parseInt(temp, 2);
             toDecrypt[i] = decimal;
-            System.out.print(toDecrypt[i]+" ");
         }
 
     }
@@ -121,7 +120,7 @@ public class DecryptorSkeleton {
      * Given an array of decimal ints, using the A1Z26 Cypher, build a String
      * that correlates each decimal value to a char (Character, a-z).
      *
-     * HINT: This can be done in two additional lines of code.
+     * HINT: This can be done in two additional lines of code.x
      *
      * @param toDecrypt - The array to be decoded.
      */
