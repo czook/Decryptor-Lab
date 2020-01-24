@@ -108,7 +108,9 @@ public class DecryptorSkeleton {
      * @param toDecrypt - The array to be decoded.
      */
     public static void divideArrayValues(int[] toDecrypt) {
-        // TODO
+        for (Integer i : toDecrypt){
+            toDecrypt[i] = toDecrypt / 5;
+        }
     }
 
 
